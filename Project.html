@@ -95,6 +95,22 @@
 
         }
 
+        function changeColor() {
+                let red = Math.floor(Math.random() * 256);
+                let green = Math.floor(Math.random() * 256);
+                let blue = Math.floor(Math.random() * 256);
+
+                let newColor = "rgb("+ red + "," + green + "," + blue +")";
+                document.getElementById("shape").style.backgroundColor= newColor;
+
+        }
+        function changeShapeB() {
+            let shapeC = Math.random() * 101;
+            shapeC = Math.floor(shapeC) 
+            document.getElementById("shape").style.borderRadius = shapeC + "%";
+
+        }
+
         function apearAfterDelay() {
 
         
@@ -102,6 +118,7 @@
 
         }
         apearAfterDelay()
+        
         document.getElementById("shape").onclick = function() {
             
 
@@ -112,7 +129,10 @@
             let timeTaken = end - start;
 
             document.getElementById("time").innerHTML = " " + timeTaken + "ms";
-            apearAfterDelay()
+            apearAfterDelay();
+            changeShapeB();
+            changeColor();
+
 
             
         }
